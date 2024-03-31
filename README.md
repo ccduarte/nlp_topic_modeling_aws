@@ -57,7 +57,7 @@ Project Organization
     │       └── visualize.py
     │
     └── create_comprehend_role.py <- create a role on AWS 
-    └── post_install.py <- install <- pt_core_news_sm model from spacy
+    └── post_install.py <- install pt_core_news_sm model from spacy
 
 
 --------
