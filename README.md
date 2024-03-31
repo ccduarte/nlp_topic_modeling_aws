@@ -1,35 +1,42 @@
-Identificação facil e detecção de vivacidade
+Cloud Topic Modeling using AWS
 ==============================
 
-Esse projeto tem como objetivo fazer o reconhecimento facil e faz parte do projeto integrado das disciplinas de COGNITIVE ENVIROMENTS, MLOPS E COMPUTER VISION do curso MBA Data Science & Artificial Intelligence da FIAP. 
+Esse projeto tem como objetivo fazer a classificação de atendimentos usando modelos de classificação textual e faz parte do projeto integrado da disciplina de COGNITIVE ENVIROMENTS do curso MBA Data Science & Artificial Intelligence da FIAP. 
+
+Arquitecture
+------------
+<img src="src/visualization/arquitetura_aws.png" alt="Alt text" width="800" height="500">
+
+How to access:
+------------
+- É necessário ter instalado: `Python / VS Code`  em sua máquina
+- Ter configurado `ACCESS_ID`, `ACCESS_KEY` e `region` de sua conta AWS em um arquivo `.env` na raiz do repositório
+
+**MacOS:**
+
+Crie o ambiente virtual python:
+```
+python -m venv .venv
+```
+Ative o ambiente virtual:
+```
+source .venv/bin/activate
+```
+Baixe as dependencias para ter acesso ao mesmo ambiente de desenvolvimento: 
+```
+python -m pip install -r requirements.txt
+```
+
 
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    ├── notebooks          <- Jupyter notebooks
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── requirements.txt   <- The requirements file for reproducing the analysis environment
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
@@ -49,7 +56,8 @@ Project Organization
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── create_comprehend_role.py <- create a role on AWS 
+    └── post_install.py <- install <- pt_core_news_sm model from spacy
 
 
 --------
